@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-traficklights/static/css/main.b8aa9774.css",
+    "main.js": "/react-traficklights/static/js/main.b8bb9fa6.js",
+    "index.html": "/react-traficklights/index.html",
+    "main.b8aa9774.css.map": "/react-traficklights/static/css/main.b8aa9774.css.map",
+    "main.b8bb9fa6.js.map": "/react-traficklights/static/js/main.b8bb9fa6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b8aa9774.css",
+    "static/js/main.b8bb9fa6.js"
+  ]
+}

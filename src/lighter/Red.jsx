@@ -1,17 +1,12 @@
-import React, { useState,  useEffect } from "react";
+import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom"
 import './Styles.css';
+import { Timer } from "./Timer";
 
 
 const Red = () => {
 	const navigate = useNavigate()
 	const location = useLocation()
-
-	///таймер
-	const [sec, setSec] = useState(10);
-	useEffect(() => {
-		sec > 0 && setTimeout(() => setSec(sec - 1), 1000);
-	}, [sec]);
 
 	//переадресация
 	useEffect(() => {
@@ -23,7 +18,7 @@ const Red = () => {
 	return (
 		<>
 		<div className="trafic">
-			<div className="lighter red active">{sec}</div>
+			<div className="lighter red active"><Timer seconds={10}/></div>
 			<div className="lighter yellow"></div>
 			<div className="lighter green"></div>
 		</div>	

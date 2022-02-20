@@ -1,18 +1,13 @@
-import React, { useState, useEffect }  from "react";
+import React, { useEffect }  from "react";
 import { useLocation, useNavigate } from "react-router-dom"
 import './Styles.css';
+
+import { Timer } from "./Timer";
 
 const Yellow = () => {
 	const location = useLocation()
 	const navigate = useNavigate()
 
-	///таймер
-	const [sec, setSec] = useState(3);
-	useEffect(() => {
-		sec > 0 && setTimeout(() => setSec(sec - 1), 1000);
-	}, [sec]);
-
-	
 	//проверка для перехода по URL
 	if (location.state == null) {
 		location.state = {}
@@ -41,7 +36,7 @@ const Yellow = () => {
 		<>
 		<div className="trafic">
 			<div className="lighter red"></div>
-			<div className="lighter yellow active">{sec}</div>
+			<div className="lighter yellow active"><Timer seconds={3}/></div>
 			<div className="lighter green"></div>
 		</div>
 		</>
